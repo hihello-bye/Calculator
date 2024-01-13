@@ -15,3 +15,6 @@ function divide(a,b) {
 function multiply(a,b) {
     return a * b;
 }
+let number1 = 3;
+let operator = '+';
+let number2 = 6;
