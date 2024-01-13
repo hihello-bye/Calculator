@@ -12,3 +12,6 @@ function divide(a,b) {
         return "Not possible to divide by 0 :(";
     }
  }
+function multiply(a,b) {
+    return a * b;
+}
