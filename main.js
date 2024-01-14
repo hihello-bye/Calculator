@@ -76,9 +76,10 @@ function clearDisplay() {
 function calculate() {
     if (number1 !== '' && operator !== '' && number2 !== '') {
         const result = operate(operator, parseFloat(number1), parseFloat(number2));
+        number1 = result.toString();
         number2 = '';
         operator = '';
-        displayValue = number1.toString();
+        displayValue = result.toString();
         updateDisplay();
     }
 
