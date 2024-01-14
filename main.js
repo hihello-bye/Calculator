@@ -62,3 +62,14 @@ function clearDisplay() {
     displayValue = '';
     updateDisplay();
 }
+
+function calculate() {
+    if (number1 !== '' && operator !== '' && number2 !== '') {
+        number1 = operate(operator, parseFloat(number1), parseFloat(number2));
+        number2 = '';
+        operator = '';
+        displayValue = number1.toString();
+        updateDisplay();
+    }
+
+}
