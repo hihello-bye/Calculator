@@ -38,3 +38,5 @@ function operate(operator,a,b) {
 
     }
 }
+
+let displayValue = '';
