@@ -41,6 +41,11 @@ function operate(operator,a,b) {
 
 let displayValue = '';
 
+function appendDigit(digit) {
+    displayValue += digit;
+    updateDisplay();
+}
+
 function updateDisplay() {
     document.getElementById('display').value = displayValue;
 
