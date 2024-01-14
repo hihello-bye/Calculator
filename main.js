@@ -19,9 +19,10 @@ function multiply(a,b) {
     return a * b;
 }
 
-let number1 = 3;
-let operator = '+';
-let number2 = 6;
+let number1 = '';
+let operator = '';
+let number2 = '';
+let displayValue = '';
 
 function operate(operator,a,b) {
     switch (operator) {
@@ -38,8 +39,6 @@ function operate(operator,a,b) {
 
     }
 }
-
-let displayValue = '';
 
 function appendDigit(digit) {
     displayValue += digit;
