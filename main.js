@@ -45,8 +45,17 @@ function appendDigit(digit) {
     updateDisplay();
 }
 
-function setOperator(operator){
-    displayValue += '' + operator + '';
+function setOperator(op){
+    if(number1 === '') {
+        number1 = displayValue;
+        operator = op;
+        displayValue = '';
+     }
+     else {
+        number2 = displayValue;
+        calculate();
+        operator = op;
+     }
     updateDisplay();
 }
 
