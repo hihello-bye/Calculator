@@ -55,6 +55,7 @@ function setOperator(op){
         number2 = displayValue;
         calculate();
         operator = op;
+        displayValue = '';
      }
     updateDisplay();
 }
