@@ -24,8 +24,8 @@ let operator = '';
 let number2 = '';
 let displayValue = '';
 
-function operate(operator,a,b) {
-    switch (operator) {
+function operate(op,a,b) {
+    switch (op) {
         case '+':
          return add(a,b);
         case '-':
