@@ -54,3 +54,11 @@ function updateDisplay() {
     document.getElementById('display').value = displayValue;
 
 }
+
+function clearDisplay() {
+    number1 = '';
+    number2 = '';
+    operator = '';
+    displayValue = '';
+    updateDisplay();
+}
