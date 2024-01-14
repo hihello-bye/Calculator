@@ -46,6 +46,11 @@ function appendDigit(digit) {
     updateDisplay();
 }
 
+function setOperator(operator){
+    displayValue += '' + operator + '';
+    updateDisplay();
+}
+
 function updateDisplay() {
     document.getElementById('display').value = displayValue;
 
