@@ -5,3 +5,34 @@ body {
     height: 100vh;
 
 }
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+#display {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    max-width: 300px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+}
