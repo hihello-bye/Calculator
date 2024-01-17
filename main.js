@@ -42,7 +42,12 @@ function operate(op,a,b) {
 
 function appendDigit(digit) {
     console.log("appendDigit called with digit:", digit);
-    displayValue += digit;
+    if (operator === '') {
+        number1 += digit;
+    } else {
+        number2 += digit;
+    }
+    displayValue = operator !== '' ? number2 : number1;
     updateDisplay();
 }
 
@@ -54,14 +59,14 @@ function setOperator(op){
         displayValue += op;
     } 
     else {
-        number2 = displayValue;
-        calculate();
         operator = op;
-        displayValue = number1 + op;
-    }
+    number2 = '';
+    displayValue = number1 + op;
     updateDisplay();
+    }
 
 }
+
 function calculate() {
     console.log("calculate called");
     if (number1 !== '' && operator !== '' && number2 !== '') {
@@ -77,13 +82,12 @@ function calculate() {
         displayValue = "ERRROR" + error.message;
         updateDisplay();
     }
+} console.log("displayValue:", displayValue);
+console.log("number1:", number1);
+console.log("number2:", number2);
+console.log("operator:", operator);
 }
-}
-    
 
-    
-
-   
 function updateDisplay() {
     console.log("updateDisplay called with displayValue:", displayValue);
     document.getElementById('display').value = displayValue;
