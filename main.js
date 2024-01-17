@@ -94,3 +94,13 @@ function clearDisplay() {
     updateDisplay();
 }
 
+function backspace() {
+    if (operator ==='') {
+        number1 =number1.slice(0,-1);
+    }
+    else {
+        number2 = number2.slice(0,-1);
+    }
+    displayValue = operator !== ''? number2 : number1;
+    updateDisplay();
+}
