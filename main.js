@@ -41,7 +41,6 @@ function operate(op,a,b) {
 }
 
 function appendDigit(digit) {
-    console.log("appendDigit called with digit:", digit);
     if (operator === '') {
         number1 += digit;
     } else {
@@ -52,7 +51,6 @@ function appendDigit(digit) {
 }
 
 function setOperator(op){
-    console.log("setOperator called with operator:", op);
     if (number1 === '') {
         number1 = displayValue;
         operator = op;
@@ -68,7 +66,6 @@ function setOperator(op){
 } 
 
 function calculate() {
-    console.log("calculate called");
     if (number1 !== '' && operator !== '' && number2 !== '') {
         try {
         const result = operate(operator, parseFloat(number1), parseFloat(number2));
@@ -82,20 +79,14 @@ function calculate() {
         displayValue = "ERRROR" + error.message;
         updateDisplay();
     }
-} console.log("displayValue:", displayValue);
-console.log("number1:", number1);
-console.log("number2:", number2);
-console.log("operator:", operator);
+} 
 }
 
 function updateDisplay() {
-    console.log("updateDisplay called with displayValue:", displayValue);
     document.getElementById('display').value = displayValue;
-
 }
 
 function clearDisplay() {
-    console.log("clearDisplay called");
     number1 = '';
     number2 = '';
     operator = '';
