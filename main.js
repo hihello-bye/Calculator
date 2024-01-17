@@ -56,16 +56,16 @@ function setOperator(op){
     if (number1 === '') {
         number1 = displayValue;
         operator = op;
-        displayValue += op;
+        displayValue = number1 + op;
     } 
     else {
         operator = op;
-    number2 = '';
-    displayValue = number1 + op;
-    updateDisplay();
+        displayValue = op; 
+        updateDisplay();
     }
+    number2 = '';
 
-}
+} 
 
 function calculate() {
     console.log("calculate called");
