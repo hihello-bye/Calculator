@@ -5,7 +5,6 @@ body {
     height: 100vh;
     background-image: url("pastel.png");
     background-size: cover;
-
 }
 
 #calculator {
@@ -15,7 +14,6 @@ body {
     width: 100%;
     border-radius: 8px;
     padding: 10px;
-
 }
 
 #display {
@@ -29,19 +27,22 @@ body {
     color: #8A5092;
 }
 
-.row {
+.buttons {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 button {
-    max-width: 300px;
-    width: 100%;
+    flex-basis: calc(33.33% - 10px);
+    max-width: 100px;
     padding: 10px;
     margin: 5px;
     border-radius: 4px;
     background-color: #FFCDEA;
     border: 1px #DE9DC3 solid;
     color: #A84D86;
-    
+}
+
+.bottomRow {
+    display: flex;
 }
