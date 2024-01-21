@@ -25,6 +25,7 @@ body {
     background-color: #E0B2E7;
     border: 1px #C59FCB solid;
     color: #8A5092;
+    font-size: medium;
 }
 
 .buttons {
@@ -41,6 +42,7 @@ button {
     background-color: #FFCDEA;
     border: 1px #DE9DC3 solid;
     color: #A84D86;
+    font-size: medium;
 }
 
 .bottomRow {
