@@ -41,13 +41,20 @@ function operate(op,a,b) {
 }
 
 function appendDigit(digit) {
-    if (operator === '') {
+    if (operator === '') { 
+        if (digit === '.' && number1.includes('.')) {
+            return;
+        }
         number1 += digit;
     } else {
+        if (digit === '.' && number2.includes('.')) {
+            return;
+        }
         number2 += digit;
     }
     displayValue = operator !== '' ? number2 : number1;
     updateDisplay();
+
 }
 
 function setOperator(op){
