@@ -90,7 +90,7 @@ function calculate() {
 }
 
 function updateDisplay() {
-    document.getElementById('display').value = displayValue;
+    document.getElementById('display').textContent = displayValue;
 }
 
 function clearDisplay() {
@@ -110,4 +110,29 @@ function backspace() {
     }
     displayValue = operator !== ''? number2 : number1;
     updateDisplay();
+}
+
+document.addEventListener('keydown', keyPress);
+
+function keyPress(event) {
+    const key = event.key 
+    if (/[0-9]/.test(key)) {
+        appendDigit(key);
+    }
+    else if (['+','-','*','/'].includes(key)) {
+        setOperator(key);
+    }
+    else if (key === '.') {
+        appendDigit('.');
+    }
+    else if (key === 'Enter') {
+        calculate();
+    }
+    else if (key === 'Backspace') {
+        backspace();
+    }
+    else if (key === 'c' || key === 'C') {
+        clearDisplay();
+    }
+
 }
